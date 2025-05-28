@@ -17,7 +17,8 @@ def get_airesponse(user_propmt):
     load_dotenv()
     model = ChatOpenAI(
         model='gpt-4o-mini',
-        api_key = st.session_state['API_KEY'],
+        # api_key = st.session_state['API_KEY'],
+        api_key = st.secrets['API_KEY'],
         base_url='https://twapi.openai-hk.com/v1'
     )
     chain  =ConversationChain(llm=model,memory=st.session_state['memory'])
@@ -25,6 +26,7 @@ def get_airesponse(user_propmt):
 
 
 st.title('#我的ChatGPT')
+
 # with  st.sidebar:
 #     api_key = st.text_input('请输入你的key:',type='password')
 #     st.session_state['API_KEY'] = api_key
