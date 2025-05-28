@@ -27,9 +27,9 @@ def get_airesponse(user_propmt):
 
 st.title('#我的ChatGPT')
 
-# with  st.sidebar:
-#     api_key = st.text_input('请输入你的key:',type='password')
-#     st.session_state['API_KEY'] = api_key
+with  st.sidebar:
+    # api_key = st.text_input('请输入你的key:',type='password')
+    # st.session_state['API_KEY'] = api_key
 
 
 #session_state全局的字典
