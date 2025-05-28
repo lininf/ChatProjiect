@@ -25,9 +25,9 @@ def get_airesponse(user_propmt):
 
 
 st.title('#我的ChatGPT')
-with  st.sidebar:
-    api_key = st.text_input('请输入你的key:',type='password')
-    st.session_state['API_KEY'] = api_key
+# with  st.sidebar:
+#     api_key = st.text_input('请输入你的key:',type='password')
+#     st.session_state['API_KEY'] = api_key
 
 
 #session_state全局的字典
@@ -45,9 +45,9 @@ for message in st.session_state['messages']:
 
 user_input = st.chat_input()
 if user_input:
-    if not api_key:
-        st.info('请输入自己专属的key！！！')
-        st.stop()
+    # if not api_key:
+    #     st.info('请输入自己专属的key！！！')
+    #     st.stop()
     st.chat_message('human').write(user_input)
     #追加human绘画列表
     st.session_state['messages'].append({'role':'human','content':user_input})
